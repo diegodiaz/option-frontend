@@ -32,7 +32,8 @@ const reducer = (state: any, action: any) => {
   if (action.type === 'SET_INIT_REQUEST') {
     return {
       ...state,
-      isSearch: true,
+      isSearching: true,
+      list: [],
       search: action.payload
     };
   }

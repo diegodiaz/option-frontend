@@ -1,21 +1,25 @@
 import React, { useState } from "react";
-import useYoutube from '../hooks/useYoutube';
+import './index.css';
+import useYoutube from '../../hooks/useYoutube';
 
 function Search() {
-  const { searchList } = useYoutube();
+  const { searchList, isSearching } = useYoutube();
   const [searchWord, setSearchWord] = useState<string>('');
   const handleSearch = async () => {
     await searchList(searchWord);
   }
 
   return (
-    <div style={{ flex: 1, flexDirection: 'row' }}>
+    <div className="Search-root">
       <input
+        disabled={isSearching}
         value={searchWord}
         placeholder='Buscar'
         onChange={(e)=>setSearchWord(e.target.value)}
       />
-      <button onClick={handleSearch}>
+      <button
+        disabled={isSearching}
+        onClick={handleSearch}>
         Buscar
       </button>
     </div>
