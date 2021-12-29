@@ -1,6 +1,6 @@
 import React from 'react';
 import './index.css';
-import { VideoType } from '../../../contexts/type';
+import { VideoType } from '../../../contexts/YoutubeContext/type';
 
 export type ItemProp = {
   data: VideoType;
