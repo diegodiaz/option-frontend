@@ -1,0 +1,26 @@
+.Item-video {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  margin: 10px;
+}
+
+.Item-video-image {
+  display: flex;
+  flex: 1;
+  padding: 10px;
+}
+
+.Item-video-data {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  text-align: left;
+  font-size: 16px;
+}
+
+.Item-video-title {
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
